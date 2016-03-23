@@ -1,0 +1,16 @@
+{
+    "@context" : {
+        "event" : "http://fedora.info/definitions/v4/event#" ,
+        "xsd": "http://www.w3.org/2001/XMLSchema#" ,
+
+        "type" : "@type" ,
+        "id" : "@id" ,
+
+        "resourcePath" : { "@id" : "event:resourcePath" } ,
+        "repositoryRoot" : { "@id" : "event:repositoryRoot" } ,
+        "resourceType" : { "@id" : "event:resourceType", "@type" : "@id" } ,
+        "timestamp" : { "@id" : "event:timestamp", "@type" : "xsd:long" } ,
+        "user" : { "@id" : "event:user" } ,
+        "userAgent" : { "@id" : "event:userAgent" }
+    }
+}

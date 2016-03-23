@@ -1,0 +1,50 @@
+@prefix event: <http://fedora.info/definitions/v4/event#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<http://fedora.info/definitions/v4/event#> a owl:Ontology ;
+    rdfs:label "Fedora Event Ontology" ;
+    rdfs:comment "An ontology to describe the events emitted by a Fedora repository" ;
+    rdfs:seeAlso <URL> ;
+    dcterms:publisher <http://fedorarepository.org/> ;
+    owl:versionInfo "v0" .
+
+
+event:ResourceCreation a rdfs:Class ;
+    rdfs:label "resource creation" ;
+    rdfs:comment "A new resource was created." .
+
+event:ResourceDeletion a rdfs:Class ;
+    rdfs:label "resource deletion" ;
+    rdfs:comment "A resource was deleted." .
+
+event:PropertyModification a rdfs:Class ;
+    rdfs:label "property modification" ;
+    rdfs:comment "Properties on an object were modified." .
+
+
+event:repositoryRoot a rdfs:Property ;
+    rdfs:label "repository root" ;
+    rdfs:comment "The location of the repository root." .
+
+event:resourcePath a rdfs:Property ;
+    rdfs:label "resource path" ;
+    rdfs:comment "The path for the corresponding resource." .
+
+event:resourceType a rdfs:Property ;
+    rdfs:label "resource type" ;
+    rdfs:comment "The type of the corresponding resource" .
+
+event:timestamp a rdfs:Property ;
+    rdfs:label "timestamp" ;
+    rdfs:comment "A timestamp for the event" .
+
+event:user a rdfs:Property ;
+    rdfs:label "user" ;
+    rdfs:comment "A user on whose behalf the repository operation was performed." .
+
+event:userAgent a rdfs:Property ;
+    rdfs:label "user agent" ;
+    rdfs:comment "The userAgent value corresponding to the repository operation." .
