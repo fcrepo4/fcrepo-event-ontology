@@ -15,12 +15,6 @@ ontology. These types include:
   * `event:ResourceDeletion`
   * `event:ResourceModification`
 
-## Properties
-
-Each event must also indicate the root location of the repository in which
-the resource is contained. For that purpose, this property is provided:
-`event:containedInRepository`.
-
 ## Data described in events
 
 Each event will contain the following required data:
@@ -54,7 +48,7 @@ A message serialized as compact JSON+LD could, therefore, take the following for
         "Container" ,
         "http://example.org/CustomType" ] ,
       "identifier" : "/path/to/resource" ,
-      "containedInRepository" : "http://localhost:8080/fcrepo/rest" ,
+      "isPartOf" : "http://localhost:8080/fcrepo/rest" ,
       "wasGeneratedBy" : {
         "type" : [
           "Activity" ,

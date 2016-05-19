@@ -28,8 +28,3 @@ event:ResourceModification a rdfs:Class ;
     rdfs:comment "A resource was modified." ;
     vs:term_status "stable" .
 
-event:containedInRepository a rdfs:Property ;
-    rdfs:label "contained in repository" ;
-    rdfs:comment "This property is used to describe the location of the repository root." ;
-    vs:term_status "testing" .
-
