@@ -61,7 +61,7 @@ A message serialized as compact JSON+LD could, therefore, take the following for
           "ResourceCreation" ,
           "PropertyModification" ] ,
         "identifier" : "3c834a8f-5638-4412-aa4b-35ea80416a18" ,
-        "atTime" : 1458750952 } ,
+        "atTime" : "2016-05-19T17:17:39-04:00" } ,
       "wasAttributedTo" : [
         { "type" : "Person" ,
           "name" : "fedo raAdmin" },
