@@ -33,7 +33,7 @@ In addition, these optional properties may be available:
   * The software agent(s) used to modify the resource
 
 In this proof of concept, these events are described using the [PROV ontology](https://www.w3.org/TR/prov-o/)
-along with some other commonly used ontologies (`foaf`, `dc`).
+along with some other commonly used ontologies (`foaf`, `dc`, `dcterms`).
 
 ## Example Event
 
