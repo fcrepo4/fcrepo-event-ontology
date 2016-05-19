@@ -40,6 +40,63 @@ along with some other commonly used ontologies (`foaf`, `dc`, `dcterms`).
 A message serialized as compact JSON+LD could, therefore, take the following form:
 
     {
+      "@context" : {
+        "prov" : "http://www.w3.org/ns/prov#" ,
+        "fedora" : "http://fedora.info/definitions/v4/repository#" ,
+        "event" : "http://fedora.info/definitions/v4/event#" ,
+        "foaf" : "http://xmlns.com/foaf/0.1/" ,
+        "dc" : "http://purl.org/dc/elements/1.1/" ,
+        "dcterms" : "http://purl.org/dc/terms/" ,
+        "xsd" : "http://www.w3.org/2001/XMLSchema#" ,
+
+        "type" : "@type" ,
+        "id" : "@id" ,
+
+        "atTime" : { "@id" : "prov:atTime", "@type" : "xsd:dateTime" } ,
+        "identifier" : { "@id" : "dc:identifier" } ,
+        "isPartOf" : { "@id" : "dcterms:isPartOf" } ,
+        "name" : { "@id" : "foaf:name" } ,
+        "wasAttributedTo" : { "@id" : "prov:wasAttributedTo" } ,
+        "wasGeneratedBy" : { "@id" : "prov:wasGeneratedBy" } ,
+
+        "ResourceCreation" : { "@id" : "event:ResourceCreation" } ,
+        "ResourceDeletion" : { "@id" : "event:ResourceDeletion" } ,
+        "ResourceModification" : { "@id" : "event:ResourceModification" } ,
+
+        "Binary" : { "@id" : "fedora:Binary" } ,
+        "Container" : { "@id" : "fedora:Container" } ,
+        "RepositoryRoot" : { "@id" : "fedora:RepositoryRoot" } ,
+        "Resource" : { "@id" : "fedora:Resource" } ,
+
+        "Activity" : { "@id" : "prov:Activity" } ,
+        "Entity" : { "@id" : "prov:Entity" } ,
+        "Person" : { "@id" : "prov:Person" } ,
+        "SoftwareAgent" : { "@id" : "prov:SoftwareAgent" } } ,
+
+      "id" : "http://localhost:8080/fcrepo/rest/path/to/resource" ,
+      "type" : [
+        "Entity" ,
+        "Resource" ,
+        "Container" ,
+        "http://example.org/CustomType" ] ,
+      "identifier" : "/path/to/resource" ,
+      "isPartOf" : "http://localhost:8080/fcrepo/rest" ,
+      "wasGeneratedBy" : {
+        "type" : [
+          "Activity" ,
+          "ResourceCreation" ] ,
+        "identifier" : "3c834a8f-5638-4412-aa4b-35ea80416a18" ,
+        "atTime" : "2016-05-19T17:17:39-04:00" } ,
+      "wasAttributedTo" : [
+        { "type" : "Person" ,
+          "name" : "fedo raAdmin" },
+        { "type" : "SoftwareAgent" ,
+          "name" : "CLAW client/1.0" } ]
+    }
+
+Or, with the `@context` defined at a URL location:
+
+    {
       "@context" : "http://fedora.info/definitions/v4/event.json" ,
       "id" : "http://localhost:8080/fcrepo/rest/path/to/resource" ,
       "type" : [
