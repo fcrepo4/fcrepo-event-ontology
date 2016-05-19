@@ -17,9 +17,9 @@
     "wasAttributedTo" : { "@id" : "prov:wasAttributedTo" } ,
     "wasGeneratedBy" : { "@id" : "prov:wasGeneratedBy" } ,
 
-    "PropertyModification" : { "@id" : "event:PropertyModification" } ,
     "ResourceCreation" : { "@id" : "event:ResourceCreation" } ,
     "ResourceDeletion" : { "@id" : "event:ResourceDeletion" } ,
+    "ResourceModification" : { "@id" : "event:ResourceModification" } ,
 
     "Binary" : { "@id" : "fedora:Binary" } ,
     "Container" : { "@id" : "fedora:Container" } ,

@@ -13,7 +13,7 @@ ontology. These types include:
 
   * `event:ResourceCreation`
   * `event:ResourceDeletion`
-  * `event:PropertyModification`
+  * `event:ResourceModification`
 
 ## Properties
 
@@ -29,7 +29,7 @@ Each event will contain the following required data:
   * The dateTime of the resource modification
   * The `rdf:type` of the affected resource
   * A unique identifier for the event
-  * The type of repository event (e.g. `event:PropertyModification`)
+  * The type of repository event (e.g. `event:ResourceModification`)
 
 In addition, these optional properties may be available:
 
@@ -58,8 +58,7 @@ A message serialized as compact JSON+LD could, therefore, take the following for
       "wasGeneratedBy" : {
         "type" : [
           "Activity" ,
-          "ResourceCreation" ,
-          "PropertyModification" ] ,
+          "ResourceCreation" ] ,
         "identifier" : "3c834a8f-5638-4412-aa4b-35ea80416a18" ,
         "atTime" : "2016-05-19T17:17:39-04:00" } ,
       "wasAttributedTo" : [

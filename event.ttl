@@ -23,9 +23,9 @@ event:ResourceDeletion a rdfs:Class ;
     rdfs:comment "A resource was deleted." ;
     vs:term_status "stable" .
 
-event:PropertyModification a rdfs:Class ;
-    rdfs:label "property modification" ;
-    rdfs:comment "Properties on an object were modified." ;
+event:ResourceModification a rdfs:Class ;
+    rdfs:label "resource modification" ;
+    rdfs:comment "A resource was modified." ;
     vs:term_status "stable" .
 
 event:containedInRepository a rdfs:Property ;
