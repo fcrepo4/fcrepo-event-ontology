@@ -1,16 +1,34 @@
 {
-    "@context" : {
-        "event" : "http://fedora.info/definitions/v4/event#" ,
-        "xsd": "http://www.w3.org/2001/XMLSchema#" ,
+  "@context" : {
+    "prov" : "http://www.w3.org/ns/prov#" ,
+    "fedora" : "http://fedora.info/definitions/v4/repository#" ,
+    "event" : "http://fedora.info/definitions/v4/event#" ,
+    "foaf" : "http://xmlns.com/foaf/0.1/" ,
+    "dc" : "http://purl.org/dc/elements/1.1/" ,
+    "xsd" : "http://www.w3.org/2001/XMLSchema#" ,
 
-        "type" : "@type" ,
-        "id" : "@id" ,
+    "type" : "@type" ,
+    "id" : "@id" ,
 
-        "resourcePath" : { "@id" : "event:resourcePath" } ,
-        "repositoryRoot" : { "@id" : "event:repositoryRoot" } ,
-        "resourceType" : { "@id" : "event:resourceType", "@type" : "@id" } ,
-        "timestamp" : { "@id" : "event:timestamp", "@type" : "xsd:long" } ,
-        "user" : { "@id" : "event:user" } ,
-        "userAgent" : { "@id" : "event:userAgent" }
-    }
+    "atTime" : { "@id" : "prov:atTime", "@type" : "xsd:dateTime" } ,
+    "containedInRepository" : { "@id" : "event:containedInRepository" } ,
+    "identifier" : { "@id" : "dc:identifier" } ,
+    "name" : { "@id" : "foaf:name" } ,
+    "wasAttributedTo" : { "@id" : "prov:wasAttributedTo" } ,
+    "wasGeneratedBy" : { "@id" : "prov:wasGeneratedBy" } ,
+
+    "PropertyModification" : { "@id" : "event:PropertyModification" } ,
+    "ResourceCreation" : { "@id" : "event:ResourceCreation" } ,
+    "ResourceDeletion" : { "@id" : "event:ResourceDeletion" } ,
+
+    "Binary" : { "@id" : "fedora:Binary" } ,
+    "Container" : { "@id" : "fedora:Container" } ,
+    "RepositoryRoot" : { "@id" : "fedora:RepositoryRoot" } ,
+    "Resource" : { "@id" : "fedora:Resource" } ,
+
+    "Activity" : { "@id" : "prov:Activity" } ,
+    "Entity" : { "@id" : "prov:Entity" } ,
+    "Person" : { "@id" : "prov:Person" } ,
+    "SoftwareAgent" : { "@id" : "prov:SoftwareAgent" }
+  }
 }
