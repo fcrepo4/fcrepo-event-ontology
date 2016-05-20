@@ -8,7 +8,7 @@
 <http://fedora.info/definitions/v4/event#> a owl:Ontology ;
     rdfs:label "Fedora Event Ontology" ;
     rdfs:comment "An ontology to describe the events emitted by a Fedora repository" ;
-    rdfs:seeAlso <URL> ;
+    rdfs:seeAlso <https://wiki.duraspace.org/display/FEDORAAPI/Messaging+SPI> ;
     dcterms:publisher <http://fedorarepository.org/> ;
     owl:versionInfo "v0" .
 
