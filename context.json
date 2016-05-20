@@ -4,7 +4,6 @@
     "fedora" : "http://fedora.info/definitions/v4/repository#" ,
     "event" : "http://fedora.info/definitions/v4/event#" ,
     "foaf" : "http://xmlns.com/foaf/0.1/" ,
-    "dc" : "http://purl.org/dc/elements/1.1/" ,
     "dcterms" : "http://purl.org/dc/terms/" ,
     "xsd" : "http://www.w3.org/2001/XMLSchema#" ,
 
@@ -12,8 +11,8 @@
     "id" : "@id" ,
 
     "atTime" : { "@id" : "prov:atTime", "@type" : "xsd:dateTime" } ,
-    "identifier" : { "@id" : "dc:identifier" } ,
-    "isPartOf" : { "@id" : "dcterms:isPartOf" } ,
+    "identifier" : { "@id" : "dcterms:identifier" , "@type" : "@id" } ,
+    "isPartOf" : { "@id" : "dcterms:isPartOf" , "@type" : "@id" } ,
     "name" : { "@id" : "foaf:name" } ,
     "wasAttributedTo" : { "@id" : "prov:wasAttributedTo" } ,
     "wasGeneratedBy" : { "@id" : "prov:wasGeneratedBy" } ,
