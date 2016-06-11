@@ -20,6 +20,7 @@
     "ResourceCreation" : { "@id" : "event:ResourceCreation" } ,
     "ResourceDeletion" : { "@id" : "event:ResourceDeletion" } ,
     "ResourceModification" : { "@id" : "event:ResourceModification" } ,
+    "ResourceRelocation" : { "@id" : "event:ResourceRelocation" } ,
 
     "Binary" : { "@id" : "fedora:Binary" } ,
     "Container" : { "@id" : "fedora:Container" } ,

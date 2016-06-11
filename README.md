@@ -14,6 +14,7 @@ ontology. These types include:
   * `event:ResourceCreation`
   * `event:ResourceDeletion`
   * `event:ResourceModification`
+  * `event:ResourceRelocation`
 
 ## Application profile for Fedora events (proof-of-concept)
 
@@ -116,6 +117,7 @@ Or, with the `@context` included inline:
         "ResourceCreation" : { "@id" : "event:ResourceCreation" } ,
         "ResourceDeletion" : { "@id" : "event:ResourceDeletion" } ,
         "ResourceModification" : { "@id" : "event:ResourceModification" } ,
+        "ResourceRelocation" : { "@id" : "event:ResourceRelocation" } ,
 
         "Binary" : { "@id" : "fedora:Binary" } ,
         "Container" : { "@id" : "fedora:Container" } ,
