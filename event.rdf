@@ -13,7 +13,7 @@
       <dcterms:publisher rdf:resource="http://fedorarepository.org/"/>
       <rdfs:seeAlso rdf:resource="https://wiki.duraspace.org/display/FEDORAAPI/Messaging+SPI"/>
       <rdfs:comment xml:lang="en">An ontology to describe the events emitted by a Fedora repository.</rdfs:comment>
-      <owl:versionInfo>v4/2016/06/10</owl:versionInfo>
+      <owl:versionInfo>v4/2016/06/11</owl:versionInfo>
     </owl:Ontology>
 
     <rdfs:Class rdf:about="http://fedora.info/definitions/v4/event#ResourceCreation">
