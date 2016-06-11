@@ -8,13 +8,13 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 
-    <rdf:Description rdf:about="http://fedora.info/definitions/v4/event#">
+    <owl:Ontology rdf:about="http://fedora.info/definitions/v4/event#">
       <dcterms:title xml:lang="en">Fedora Commons Event Ontology</dcterms:title>
       <dcterms:publisher rdf:resource="http://fedorarepository.org/"/>
       <rdfs:seeAlso rdf:resource="https://wiki.duraspace.org/display/FEDORAAPI/Messaging+SPI"/>
       <rdfs:comment xml:lang="en">An ontology to describe the events emitted by a Fedora repository.</rdfs:comment>
       <owl:versionInfo>v4/2016/06/10</owl:versionInfo>
-    </rdf:Description>
+    </owl:Ontology>
 
     <rdfs:Class rdf:about="http://fedora.info/definitions/v4/event#ResourceCreation">
       <rdfs:label xml:lang="en">resource creation</rdfs:label>
@@ -33,6 +33,13 @@
     <rdfs:Class rdf:about="http://fedora.info/definitions/v4/event#ResourceModification">
       <rdfs:label xml:lang="en">resource modification</rdfs:label>
       <rdfs:comment xml:lang="en">A resource was modified.</rdfs:comment>
+      <rdfs:isDefinedBy rdf:resource="http://fedora.info/definitions/v4/event#"/>
+      <vs:term_status>stable</vs:term_status>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://fedora.info/definitions/v4/event#ResourceRelocation">
+      <rdfs:label xml:lang="en">resource relocation</rdfs:label>
+      <rdfs:comment xml:lang="en">A resource was moved.</rdfs:comment>
       <rdfs:isDefinedBy rdf:resource="http://fedora.info/definitions/v4/event#"/>
       <vs:term_status>stable</vs:term_status>
     </rdfs:Class>

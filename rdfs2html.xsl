@@ -6,13 +6,13 @@
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:dcterms="http://purl.org/dc/terms/">
   <xsl:output method="html"/>
-  <xsl:variable name="about" select="/rdf:RDF/rdf:Description[1]/@rdf:about"/>
-  <xsl:variable name="title" select="/rdf:RDF/rdf:Description[1]/dcterms:title"/>
-  <xsl:variable name="comment" select="/rdf:RDF/rdf:Description[1]/rdfs:comment"/>
-  <xsl:variable name="publisher" select="/rdf:RDF/rdf:Description[1]/dcterms:publisher/@rdf:resource"/>
-  <xsl:variable name="seeAlso" select="/rdf:RDF/rdf:Description[1]/rdfs:seeAlso/@rdf:resource"/>
-  <xsl:variable name="versionInfo" select="/rdf:RDF/rdf:Description[1]/owl:versionInfo"/>
-  <xsl:variable name="priorVersion" select="/rdf:RDF/rdf:Description[1]/owl:priorVersion/@rdf:resource"/>
+  <xsl:variable name="about" select="/rdf:RDF/owl:Ontology[1]/@rdf:about"/>
+  <xsl:variable name="title" select="/rdf:RDF/owl:Ontology[1]/dcterms:title"/>
+  <xsl:variable name="comment" select="/rdf:RDF/owl:Ontology[1]/rdfs:comment"/>
+  <xsl:variable name="publisher" select="/rdf:RDF/owl:Ontology[1]/dcterms:publisher/@rdf:resource"/>
+  <xsl:variable name="seeAlso" select="/rdf:RDF/owl:Ontology[1]/rdfs:seeAlso/@rdf:resource"/>
+  <xsl:variable name="versionInfo" select="/rdf:RDF/owl:Ontology[1]/owl:versionInfo"/>
+  <xsl:variable name="priorVersion" select="/rdf:RDF/owl:Ontology[1]/owl:priorVersion/@rdf:resource"/>
 
 
   <xsl:template match="/rdf:RDF">
@@ -44,17 +44,17 @@
                 <td>Namespace</td>
                 <td><xsl:value-of select="$about"/></td>
               </tr>
-              <xsl:for-each select="/rdf:RDF/rdf:Description/rdfs:comment">
+              <xsl:for-each select="/rdf:RDF/owl:Ontology/rdfs:comment">
                 <tr class="comment">
                   <td>Description</td>
                   <td><xsl:value-of select="."/></td>
                 </tr>
               </xsl:for-each>
 
-              <xsl:if test="not(/rdf:RDF/rdf:Description/owl:versionInfo = '')">
+              <xsl:if test="not(/rdf:RDF/owl:Ontology/owl:versionInfo = '')">
                 <tr class="version">
                   <td>Version</td>
-                  <td><xsl:value-of select="/rdf:RDF/rdf:Description/owl:versionInfo"/></td>
+                  <td><xsl:value-of select="/rdf:RDF/owl:Ontology/owl:versionInfo"/></td>
                 </tr>
               </xsl:if>
               <xsl:if test="not($priorVersion = '')">
