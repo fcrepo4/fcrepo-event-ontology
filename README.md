@@ -62,7 +62,7 @@ A message could be described in RDF like so:
           [ a prov:SoftwareAgent; foaf:name "CLAW client/1.0"];
       prov:wasGeneratedBy [
           a event:ResourceCreation, prov:Activity;
-          prov:atTime "2016-05-19T17:17:39-04:00"^^xsd:dateTime;
+          prov:atTime "2016-05-19T17:17:39-04:00Z"^^xsd:dateTime;
           dcterms:identifier <urn:uuid:3c834a8f-5638-4412-aa4b-35ea80416a18> ];
       dcterms:isPartOf <http://localhost:8080/fcrepo/rest> .
 
@@ -75,17 +75,17 @@ A compact JSON-LD serialization could, therefore, take the following form:
       "@context" : "http://fedora.info/definitions/v4/event.json" ,
       "id" : "http://localhost:8080/fcrepo/rest/path/to/resource" ,
       "type" : [
-        "Entity" ,
-        "Resource" ,
-        "Container" ,
+        "http://www.w3.org/ns/prov#Entity" ,
+        "http://fedora.info/definitions/v4/repository#Resource" ,
+        "http://fedora.info/definitions/v4/repository#Container" ,
         "http://example.org/CustomType" ] ,
       "isPartOf" : "http://localhost:8080/fcrepo/rest" ,
       "wasGeneratedBy" : {
         "type" : [
-          "Activity" ,
-          "ResourceCreation" ] ,
+          "http://www.w3.org/ns/prov#Activity" ,
+          "http://fedora.info/definitions/v4/event#ResourceCreation" ] ,
         "identifier" : "urn:uuid:3c834a8f-5638-4412-aa4b-35ea80416a18" ,
-        "atTime" : "2016-05-19T17:17:39-04:00" } ,
+        "atTime" : "2016-05-19T17:17:39-04:00Z" } ,
       "wasAttributedTo" : [
         { "type" : "Person" ,
           "name" : "fedo raAdmin" },
@@ -98,8 +98,6 @@ Or, with the `@context` included inline:
     {
       "@context" : {
         "prov" : "http://www.w3.org/ns/prov#" ,
-        "fedora" : "http://fedora.info/definitions/v4/repository#" ,
-        "event" : "http://fedora.info/definitions/v4/event#" ,
         "foaf" : "http://xmlns.com/foaf/0.1/" ,
         "dcterms" : "http://purl.org/dc/terms/" ,
         "xsd" : "http://www.w3.org/2001/XMLSchema#" ,
@@ -110,38 +108,24 @@ Or, with the `@context` included inline:
         "atTime" : { "@id" : "prov:atTime", "@type" : "xsd:dateTime" } ,
         "identifier" : { "@id" : "dcterms:identifier" , "@type" : "@id" } ,
         "isPartOf" : { "@id" : "dcterms:isPartOf", "@type" : "@id" } ,
-        "name" : { "@id" : "foaf:name" } ,
-        "wasAttributedTo" : { "@id" : "prov:wasAttributedTo" } ,
-        "wasGeneratedBy" : { "@id" : "prov:wasGeneratedBy" } ,
-
-        "ResourceCreation" : { "@id" : "event:ResourceCreation" } ,
-        "ResourceDeletion" : { "@id" : "event:ResourceDeletion" } ,
-        "ResourceModification" : { "@id" : "event:ResourceModification" } ,
-        "ResourceRelocation" : { "@id" : "event:ResourceRelocation" } ,
-
-        "Binary" : { "@id" : "fedora:Binary" } ,
-        "Container" : { "@id" : "fedora:Container" } ,
-        "RepositoryRoot" : { "@id" : "fedora:RepositoryRoot" } ,
-        "Resource" : { "@id" : "fedora:Resource" } ,
-
-        "Activity" : { "@id" : "prov:Activity" } ,
-        "Entity" : { "@id" : "prov:Entity" } ,
-        "Person" : { "@id" : "prov:Person" } ,
-        "SoftwareAgent" : { "@id" : "prov:SoftwareAgent" } } ,
+        "name" : { "@id" : "foaf:name", "@type" : "xsd:string" } ,
+        "wasAttributedTo" : { "@id" : "prov:wasAttributedTo", "@type" : "@id" } ,
+        "wasGeneratedBy" : { "@id" : "prov:wasGeneratedBy", "@type" : "@id" }
+      } ,
 
       "id" : "http://localhost:8080/fcrepo/rest/path/to/resource" ,
       "type" : [
-        "Entity" ,
-        "Resource" ,
-        "Container" ,
+        "http://www.w3.org/ns/prov#Entity" ,
+        "http://fedora.info/definitions/v4/repository#Resource" ,
+        "http://fedora.info/definitions/v4/repository#Container" ,
         "http://example.org/CustomType" ] ,
       "isPartOf" : "http://localhost:8080/fcrepo/rest" ,
       "wasGeneratedBy" : {
         "type" : [
-          "Activity" ,
-          "ResourceCreation" ] ,
+          "http://www.w3.org/ns/prov#Activity" ,
+          "http://fedora.info/definitions/v4/event#ResourceCreation" ] ,
         "identifier" : "urn:uuid:3c834a8f-5638-4412-aa4b-35ea80416a18" ,
-        "atTime" : "2016-05-19T17:17:39-04:00" } ,
+        "atTime" : "2016-05-19T17:17:39-04:00Z" } ,
       "wasAttributedTo" : [
         { "type" : "Person" ,
           "name" : "fedo raAdmin" },
