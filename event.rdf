@@ -14,6 +14,9 @@
       <rdfs:seeAlso rdf:resource="https://wiki.duraspace.org/display/FEDORAAPI/Messaging+SPI"/>
       <rdfs:comment xml:lang="en">An ontology to describe the events emitted by a Fedora repository.</rdfs:comment>
       <owl:versionInfo>v4/2016/06/11</owl:versionInfo>
+      <owl:imports rdf:resource="http://www.w3.org/ns/prov#"/>
+      <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
+      <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
     </owl:Ontology>
 
     <rdfs:Class rdf:about="http://fedora.info/definitions/v4/event#ResourceCreation">
