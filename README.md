@@ -87,9 +87,9 @@ A compact JSON-LD serialization could, therefore, take the following form:
         "identifier" : "urn:uuid:3c834a8f-5638-4412-aa4b-35ea80416a18" ,
         "atTime" : "2016-05-19T17:17:39-04:00Z" } ,
       "wasAttributedTo" : [
-        { "type" : "Person" ,
+        { "type" : "http://www.w3.org/ns/prov#Person" ,
           "name" : "fedo raAdmin" },
-        { "type" : "SoftwareAgent" ,
+        { "type" : "http://www.w3.org/ns/prov#SoftwareAgent" ,
           "name" : "CLAW client/1.0" } ]
     }
 
@@ -97,20 +97,16 @@ Or, with the `@context` included inline:
 
     {
       "@context" : {
-        "prov" : "http://www.w3.org/ns/prov#" ,
-        "foaf" : "http://xmlns.com/foaf/0.1/" ,
-        "dcterms" : "http://purl.org/dc/terms/" ,
         "xsd" : "http://www.w3.org/2001/XMLSchema#" ,
-
         "type" : "@type" ,
         "id" : "@id" ,
 
-        "atTime" : { "@id" : "prov:atTime", "@type" : "xsd:dateTime" } ,
-        "identifier" : { "@id" : "dcterms:identifier" , "@type" : "@id" } ,
-        "isPartOf" : { "@id" : "dcterms:isPartOf", "@type" : "@id" } ,
-        "name" : { "@id" : "foaf:name", "@type" : "xsd:string" } ,
-        "wasAttributedTo" : { "@id" : "prov:wasAttributedTo", "@type" : "@id" } ,
-        "wasGeneratedBy" : { "@id" : "prov:wasGeneratedBy", "@type" : "@id" }
+        "atTime" : { "@id" : "http://www.w3.org/ns/prov#atTime", "@type" : "xsd:dateTime" } ,
+        "identifier" : { "@id" : "http://purl.org/dc/terms/identifier" , "@type" : "@id" } ,
+        "isPartOf" : { "@id" : "http://purl.org/dc/terms/isPartOf", "@type" : "@id" } ,
+        "name" : { "@id" : "http://xmlns.com/foaf/0.1/name" } ,
+        "wasAttributedTo" : { "@id" : "http://www.w3.org/ns/prov#wasAttributedTo", "@type" : "@id" } ,
+        "wasGeneratedBy" : { "@id" : "http://www.w3.org/ns/prov#wasGeneratedBy", "@type" : "@id" }
       } ,
 
       "id" : "http://localhost:8080/fcrepo/rest/path/to/resource" ,
@@ -127,9 +123,9 @@ Or, with the `@context` included inline:
         "identifier" : "urn:uuid:3c834a8f-5638-4412-aa4b-35ea80416a18" ,
         "atTime" : "2016-05-19T17:17:39-04:00Z" } ,
       "wasAttributedTo" : [
-        { "type" : "Person" ,
+        { "type" : "http://www.w3.org/ns/prov#Person" ,
           "name" : "fedo raAdmin" },
-        { "type" : "SoftwareAgent" ,
+        { "type" : "http://www.w3.org/ns/prov#SoftwareAgent" ,
           "name" : "CLAW client/1.0" } ]
     }
 
